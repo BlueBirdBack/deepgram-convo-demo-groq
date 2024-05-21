@@ -1,72 +1,72 @@
-# Deepgram AI Agent Technical Demo
+# Deepgram Conversational AI Agent Demo using the llama3-70b-8192 API served by Groq
 
-Combine Text-to-Speech and Speech-to-Text into a conversational agent.
-
-> Project codename EmilyAI
+Hey there! We're pumped to introduce EmilyAI, a cutting-edge conversational AI agent that combines the best of Text-to-Speech and Speech-to-Text.
 
 [![Discord](https://dcbadge.vercel.app/api/server/xWRaCDBtW4?style=flat)](https://discord.gg/xWRaCDBtW4)
 
-The purpose of this demo is to showcase how you can build a Conversational AI application that engages users in natural language interactions, mimicking human conversation through natural language processing using [Deepgram](https://deepgram.com/).
+We're going to walk you through building a conversational AI app that can chat with users in a super natural way. And the secret sauce? [Deepgram](https://deepgram.com/)'s natural language processing tech that makes it all possible.
 
-Examples of where you would see this type of application include: virtual assistants for tasks like answering queries and controlling smart devices, educational tutors for personalized learning, healthcare advisors for medical information, and entertainment chat bots for engaging conversations and games.
+Imagine having virtual assistants that can answer all your questions and control your smart devices, educational tutors that can tailor their teaching to your needs, healthcare bots that can provide expert advice, or even chatbots that can keep you company with conversation and games. This technology is going to make life so much simpler and more convenient.
 
-These applications aim to enhance user experiences by offering efficient and intuitive interactions, reducing the need for human intervention in various tasks and services.
+## Reporting Issues
 
-## Issue Reporting
+If you stumble upon any bugs or have ideas for new features, please head over to the issues section of this repository and let us know. But please, keep any security vulnerability reports private - we don't want to broadcast them to the world.
 
-If you have found a bug or if you have a feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public GitHub issue tracker.
-
-Check out our [KNOWN ISSUES](./KNOWN_ISSUES.md) before reporting.
+Oh, and before you submit anything, make sure to check out our [KNOWN ISSUES](./KNOWN_ISSUES.md) list to ensure it hasn't already been reported.
 
 ## Demo features
 
-- Capture streaming audio using [Deepgram Streaming Speech to Text](https://developers.deepgram.com/docs/getting-started-with-live-streaming-audio).
-- Natural Language responses using an OpenAI LLM.
-- Speech to Text conversion using [Deepgram Aura Text to Speech](https://developers.deepgram.com/docs/text-to-speech).
+- Capture audio in real-time using [Deepgram's live speech-to-text streaming feature](https://developers.deepgram.com/docs/getting-started-with-live-streaming-audio).
+- Experience natural language responses driven by Groq's llama3-70b-8192 API.
+- Turn text into speech with [Deepgram's Aura Text to Speech feature](https://developers.deepgram.com/docs/text-to-speech).
 
 ## What is Deepgram?
 
-[Deepgram](https://deepgram.com/) is a foundational AI company providing speech-to-text and language understanding capabilities to make data readable and actionable by human or machines.
+[Deepgram](https://deepgram.com/) is a company that's making some serious waves in the world of speech recognition and language understanding. They're the ones providin' the tech that makes all this magic happen.
 
-## Sign-up to Deepgram
+## Sign up for Deepgram
 
-Want to start building using this project? [Sign-up now for Deepgram and create an API key](https://console.deepgram.com/signup?jump=keys).
+Ready to get started on this project? Get your API key from Deepgram - it's a breeze, I swear. [Sign up now](https://console.deepgram.com/signup?jump=keys) and let's get moving!
 
 ## Quickstart
 
-### Manual
+Time to get this party started! Here's the lowdown on how to fire up this demo app.
 
-Follow these steps to get started with this starter application.
+### Clone the repository
 
-#### Clone the repository
+First things first, head on over to GitHub and [clone this repository](https://github.com/BlueBirdBack/deepgram-convo-demo-groq).
 
-Go to GitHub and [clone the repository](https://github.com/deepgram-starters/live-nextjs-starter).
+```bash
+git clone https://github.com/BlueBirdBack/deepgram-convo-demo-groq
+```
 
-#### Install dependencies
+### Install dependencies
 
-Install the project dependencies.
+Next up, install all the project dependencies.
 
 ```bash
 npm install
 ```
 
-#### Edit the config file
+### Edit the config file
 
-Copy the code from `sample.env.local` and create a new file called `.env.local`.
+Duplicate `sample.env.local` and save it as a new file called `.env.local`.
 
 ```bash
 DEEPGRAM_STT_DOMAIN=https://api.deepgram.com
 DEEPGRAM_API_KEY=YOUR-DG-API-KEY
-OPENAI_API_KEY=YOUR-OPENAI-API-KEY
+GROQ_API_KEY=YOUR-GROQ-API-KEY
+BASE_URL=https://api.groq.com/openai/v1
+MODEL=llama3-70b-8192
 ```
 
-1. For `DEEPGRAM_API_KEY` paste in the key you generated in the [Deepgram console](https://console.deepgram.com/).
-2. Set `DEEPGRAM_STT_DOMAIN` to be `https://api.deepgram.com`.
-3. `OPENAI_API_KEY` should be an OpenAI API Key that can access the chat completions API.
+1. For `DEEPGRAM_API_KEY`, just paste in the key you generated in the [Deepgram console](https://console.deepgram.com/).
 
-#### Run the application
+2. `GROQ_API_KEY` should be a Groq API Key that can access the chat completions API. You can get one [here](https://console.groq.com/keys) for free.
 
-Once running, you can [access the application in your browser](http://localhost:3000).
+### Run the application
+
+Get the app up and running, and you can access it in your browser at http://localhost:3000.
 
 ```bash
 npm run dev
